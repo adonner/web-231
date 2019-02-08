@@ -30,6 +30,7 @@ var payRate1 = 100.90;
 var Date1 = new Date(2010,10,10);
 var hireDate1 = Date1.toLocaleDateString();  //Coverts the date to include /
 
+//Employee Two Record:
 var firstName2 = "Jack";
 var lastName2 = "Adams";
 var address2 = "14445 New Way, NY"
@@ -37,6 +38,7 @@ var payRate2 = 100.50;
 var Date2 = new Date(2011,9,18);
 var hireDate2 = Date2.toLocaleDateString();  //Coverts the date to include /
 
+//Employee Three Record:
 var firstName3 = "Leroy";
 var lastName3 = "Worden";
 var address3 = "14445 New Way, NY"
