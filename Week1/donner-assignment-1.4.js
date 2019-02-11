@@ -5,10 +5,9 @@
 ; Author: Adam Donner
 ; Date: 7 February 2019
 ; Description: This program demonstrates the
-; use of JavaScript values and variables 
-; using the variable deceleration and 
-; console.log
-;===========================================
+; use of JavaScript values and variables to 
+; display user information
+;=========================================== 
 */ 
 
 // start program
@@ -20,24 +19,31 @@
     Age
     Street Address
     City
-    Zipcode
+    Zip Code
 */
 
 // Variable declaration for contact information:
-var firstName = "Adam";
-var lastName = "Donner";
-var age = "37"
-var street = "14445 Bennington Way"
-var city = "Omaha"
-var zipCode = "68123"
+let firstName;
+let lastName;
+let age;
+let street;
+let city;
+let zipCode;
+
+firstName = "Adam";
+lastName = "Donner";
+age = "37";
+street = "14445 Bennington Way";
+city = "Omaha";
+zipCode = "618123";
 
 
 // output
-console.log(firstName);
-console.log(lastName);
-console.log(age);
-console.log(street);
-console.log(city);
-console.log(zipCode);
+console.log('First Name: ' + firstName);
+console.log('Last Name: '  + lastName);
+console.log('Age: ' + age);
+console.log('Street: ' + street);
+console.log('City: ' + city);
+console.log('Zip Code: ' + zipCode)
 
 // end program

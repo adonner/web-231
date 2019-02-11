@@ -2,11 +2,10 @@
 ============================================
 ; Title: donner-assignment-1.5.js
 ; Author: Adam Donner
-; Date: 7 February 2019
-; Description: This program demonstrates the
-; use of JavaScript values and variables to 
-; display the employment information of 3
-; employees
+; Date: 10 February 2019
+; Description: Demonstrates the to usage of 
+; javascript to display employee records for
+; 3 employees.
 ;===========================================
 */ 
 
@@ -14,7 +13,8 @@
 
 /*
     Expected Output:
-    FOR EACH EMPLOYEE
+    FOR EACH EMPLOYEE:
+    Employee Number
     First Name
     Last Name
     Address
@@ -22,55 +22,54 @@
     Hire Date
 */
 
-// Employee One Record:
-var firstName1 = "Jean";
-var lastName1 = "Grey";
-var address1 = "14445 New Way, NY"
-var payRate1 = 100.90;
-var Date1 = new Date(2010,10,10);
-var hireDate1 = Date1.toLocaleDateString();  //Coverts the date to include /
+// Variables:
+const firstName1 = "Jean";
+const lastName1 = "Grey";
+const address1 = "14445 Alanon St. New Way, NY";
+const payRate1 = 100.15.toFixed(1);
+const Date1 = new Date(2010,10,10);
+const hireDate1 = Date1.toLocaleDateString();
 
-//Employee Two Record:
-var firstName2 = "Jack";
-var lastName2 = "Adams";
-var address2 = "14445 New Way, NY"
-var payRate2 = 100.50;
-var Date2 = new Date(2011,9,18);
-var hireDate2 = Date2.toLocaleDateString();  //Coverts the date to include /
+const firstName2 = "Jack";
+const lastName2 = "Adams";
+const address2 = "13256 Bondesen Ave. Long Island, NY";
+const payRate2 = 100.55.toFixed(1);
+const Date2 = new Date(2011,9,18);
+const hireDate2 = Date2.toLocaleDateString();
 
-//Employee Three Record:
-var firstName3 = "Leroy";
-var lastName3 = "Worden";
-var address3 = "14445 New Way, NY"
-var payRate3 = 100.80;
-var Date3 = new Date(2013,12,12);
-var hireDate3 = Date3.toLocaleDateString();  //Coverts the date to include /
+const firstName3 = "Leroy";
+const lastName3 = "Worden";
+const address3 = "98574 Tucker Street Ramsey, NJ";
+const payRate3 = 100.75.toFixed(1);
+const Date3 = new Date(2013,12,12);
+const hireDate3 = Date3.toLocaleDateString(); 
 
                                             
-
 // output
-console.log("Employee 1")
-console.log(firstName1);
-console.log(lastName1);
-console.log(address1);
-console.log("$"+payRate1.toPrecision(4));  //Ensures there is only one digit after the "." in the patRate
-console.log (hireDate1);
-console.log("");
+console.log('Employee 1');
+console.log('First Name: ' + firstName1);
+console.log('Last Name: ' + lastName1);
+console.log('Address: ' + address1);
+console.log('Daily Compensation: $'+payRate1);
+console.log ('Hire Date: ' + hireDate1);
 
-console.log("Employee 2")
-console.log(firstName2);
-console.log(lastName2);
-console.log(address2);
-console.log("$"+payRate2.toPrecision(4));  //Ensures there is only one digit after the "." in the patRate
-console.log (hireDate2);
-console.log("");
+console.log(""); // new line
 
-console.log("Employee 3")
-console.log(firstName3);
-console.log(lastName3);
-console.log(address3);
-console.log("$"+payRate3.toPrecision(4));  //Ensures there is only one digit after the "." in the patRate
-console.log (hireDate3);
+console.log('Employee 2');
+console.log('First Name: ' + firstName2);
+console.log('Last Name: ' + lastName2);
+console.log('Address: ' + address2);
+console.log('Daily Compensation: $'+payRate2);
+console.log ('Hire Date: '+hireDate2);
+
+console.log(""); // new line
+
+console.log('Employee 3');
+console.log('First Name: '+firstName3);
+console.log('Last Name: '+lastName3);
+console.log('Address: '+address3);
+console.log('Daily Compensation: $'+payRate3);
+console.log ('Hire Date: '+hireDate3);
 
 
 // end program
