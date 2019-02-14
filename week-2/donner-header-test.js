@@ -11,7 +11,7 @@
 // start program
 
 /*
-    Expected Output:
+  Expected Output:
   Name
   Assignment Week
   Todays Date
