@@ -23,6 +23,39 @@
 
 //start program
 
+/*
+=============================================
+; Title:  donner-header-test.js
+; Author: Adam
+; Date:   14 February 2019
+; Description: Displays a formatted header
+;============================================
+*/
+
+
+// start program
+
+/*
+  Expected Output:
+  Adam Donner
+  Assignment 2.4
+  Todays Date
+  
+  Name
+  Assignment Week
+  Todays Date
+*/
+
+// Calls function to display required information
+const header = require('../donner-header.js');
+
+
+// output
+console.log(header.display("Adam", "Donner", "Assignment 2.4"));
+
+
+// end program
+
 // Creates a function fullName for my first and last name separated by a space.
 function fullName (firstName, lastName) {
     return firstName + " " + lastName;
