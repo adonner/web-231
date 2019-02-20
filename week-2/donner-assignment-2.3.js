@@ -15,6 +15,8 @@
     Hello Adam Donner!
 */
 
+console.log(header.display("Adam", "Donner", "Assignment 2.3",date());
+
 // Assigns the function myFirstName the value of my first name.
 myName.adam = "Adam";
 
