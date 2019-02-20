@@ -13,9 +13,12 @@
 /*
     Expected Output:
     Hello Adam Donner!
-*/
+*/// Calls function to display required information
 
-console.log(header.display("Adam", "Donner", "Assignment 2.3",date());
+const header = require('../donner-header.js');
+
+// output
+console.log(header.display("Adam", "Donner", "Assignment 2.3"));
 
 // Assigns the function myFirstName the value of my first name.
 myName.adam = "Adam";
