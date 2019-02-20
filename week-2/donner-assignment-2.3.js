@@ -12,6 +12,10 @@
 
 /*
     Expected Output:
+    Adam Donner
+    Assignment 2.3
+    Todays Date
+    
     Hello Adam Donner!
 */// Calls function to display required information
 
