@@ -33,21 +33,6 @@ Expected output:
 */
 
 
-/*
-Instructions:  REMOVE BEFORE COMMITTING TO GITHUB!!!!!!!!!!!!!
-
-Create a variable and assign it a value between 1 and 10
-Take the functions you wrote in exercise 3.2 (match, logMismatch and logMatch) and copy them to this week's assignment.
-Create a for loop with 10 iterations and inside the body of the for loop create a local variable and assign it a random number between 1 and 10 (use the randomNumber function I have provided in the starter code)
-During each iteration of the for loop the random number should be reassigned a new random value (this means the placement of the variable should be inside the for loop).
-Next, create an if...else statement and use the match function to test if the variable in step one matches the random number created in step 3.
-For true, call the logMatch function using the same two values.  For false, call the logMismatch function using the same two values.
-If it is not obviously by now, you are basically wrapping a for loop around the work you did in exercise 3.2.
-And, instead of using multiple if...else statements and test variables you will be using a for loop to generate the test variables and one if..else statement to check the generated values.
-Run and test the program and make sure your output matches what I have in the starter code.
-Stage, commit, and push your code to GitHub.
-*/
-
 
 const header = require('../donner-header.js');  // Calls the well formatted header.
 console.log(header.display("Adam", "Donner", "Exercise 3.4"));  // This assigns values to the donner-header.js file and outputs it to the console.log.
