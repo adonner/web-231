@@ -2,7 +2,7 @@
 =============================================
 ; Title:  donner-assignment-4.2.js
 ; Author: Adam Donner
-; Date:   22 February 2019
+; Date:   2 March 2019
 ; Description: Creates an array and outputs
 ; the values using a function along with our
 ; well formated header.
