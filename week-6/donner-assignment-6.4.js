@@ -1,7 +1,8 @@
 /*
 ; Author: Adam Donner
 ; Date: 15 March 2019
-; Description:
+; Description: Creates a program that uses
+; a nested object and outputs
 ;============================================
 */
 
@@ -18,7 +19,7 @@ Expected output:
 //start program
 
 const header = require('../donner-header.js');  // Calls the well formatted header.
-console.log(header.display("Adam", "Donner", "Assignment 6.3"));  // This assigns values to the donner-header.js file and outputs it to the console.log.
+console.log(header.display("Adam", "Donner", "Assignment 6.4"));  // This assigns values to the donner-header.js file and outputs it to the console.log.
 console.log("") // Line break
 
 
@@ -27,7 +28,7 @@ console.log("") // Line break
 var ticket  = {
 
   id: 105,
-  name: 'Adam Donner ',
+  name: 'Adam Donner',
   dateCreated: new Date().toLocaleDateString('en-US'),
   priority: 'High',
 
@@ -36,13 +37,12 @@ var ticket  = {
     id: 523,
     firstName:'Bob',
     lastName:'Jones',
-    jobTitle:'(Programmer I)'
+    jobTitle:'Programmer I'
   }
 
 
 }
 // This is where I output the ticket number, date and employee assignment.
-console.log('Ticket ' + ticket.id +  ' was created on ' + ticket.dateCreated + ' and assigned to employee ' + ticket.person.firstName + ' '  + ticket.person.lastName + ' ' + ticket.person.jobTitle + '.');
-
+console.log('Ticket ' + ticket.id +  ' was created on ' + ticket.dateCreated + ' and assigned to employee ' + ticket.person.firstName + ' '  + ticket.person.lastName + ' (' + ticket.person.jobTitle + ').');
 
 //End Program
