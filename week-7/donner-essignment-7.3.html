@@ -1,0 +1,52 @@
+<!--
+============================================
+; Title:  donner-assignment-7.3.html
+; Author: Adam Donner
+; Date:   20 March 2019
+; Description: Demonstrates the use of the
+; document.write() to output a table and the
+; use of inline javascript to output a table.
+;===========================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <title>Calculator</title>
+  <meta name="author" content="Adam Donner">
+	<meta name="description" content="donner-assignment-7.3">
+  <link rel="stylesheet" href="../site.css">
+<!-- This displays todays date and a simple calculator. -->
+<!DOCTYPE html>
+
+<body>
+<script>
+document.write("<h1>SHOPPING LIST v.1</h1>")
+document.write("<ol><li>Oranges</li><li>Apples</li><li>Pears</li><li>Limes</li><li>Lemons</li></ol>")
+</script>
+<h1 id="fruitTitle"></h1>
+<div id="fruitList"></div>
+
+<div id="todo"></div>
+<script>
+  document.getElementById('fruitTitle').innerHTML = "SHOPPING LIST v.2";
+  document.getElementById('fruitList').innerHTML = "<table>" +
+    "<thead>" +
+      "<tr>" +
+      "<th>Id</th>" +
+      "<th>Item</th>" +
+    "</thead>" +
+    "<tbody>" +
+      "<tr><td>1</td><td>Oranges</td></tr>" +
+      "<tr><td>2</td><td>Apples</td></tr>" +
+      "<tr><td>3</td><td>Pears</td></tr>" +
+      "<tr><td>4</td><td>Limes</td></tr>" +
+      "<tr><td>5</td><td>Lemons</td></tr>" +
+    "</tbody>"+
+  "</table>"
+
+</script>
+
+</body>
+</html>
