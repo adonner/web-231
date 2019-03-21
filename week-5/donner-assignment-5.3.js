@@ -1,16 +1,4 @@
-/*
-=============================================
-; Title: donner-discussion-5.3.js
-; Author: Adam Donner
-; Date: 06 March 2019
-; Description: Creates an array like object of
-; values and outputs those values using the
-; .forEach function.
-;============================================
-
-
-
-// start program
+`q`
 
 
 Expected output:

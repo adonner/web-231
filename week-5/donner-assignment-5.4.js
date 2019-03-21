@@ -93,6 +93,7 @@ var composers =[
  rating: 5
 }
 ];
+
 var lastAndRank = composers.map(function(rankLname){
   return "Rating: " + rankLname.rating + "\n" + "Composer: " + rankLname.lastName
 });
@@ -103,18 +104,14 @@ var genreAndLast = composers.map(function(classLast){
 
 console.log("-- COMPOSER BY RATING --")
 
+//This outputs the values of the composers variable in a well formatted list using .forEach
 lastAndRank.forEach(function(rankAndLast){console.log(rankAndLast)+console.log("")});
 
 
 console.log("-- COMPOSER BY GENRE --")
 
-genreAndLast.forEach(function(lNameGenre){console.log(lNameGenre)+console.log("")});
-
-
-
 //This outputs the values of the composers variable in a well formatted list using .forEach
-
-
+genreAndLast.forEach(function(lNameGenre){console.log(lNameGenre)+console.log("")});
 
 
 //end program
