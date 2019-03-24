@@ -1,6 +1,6 @@
 /*
 ; Author: Adam Donner
-; Date: 15 March 2019
+; Date: 24 March 2019
 ; Description: Create an employee constructor
 ; object with four (4) parameters/field and
 ; outputs the results.
@@ -26,6 +26,8 @@ Expected output:
 const header = require('../donner-header.js');  // Calls the well formatted header.
 console.log(header.display("Adam", "Donner", "Exercise 7.2"));  // This assigns values to the donner-header.js file and outputs it to the console.log.
 console.log("") // Line break
+
+// This creates an employee constructor object
 function employeeIDs(id, firstName, lastName, title) {
   this.id = id;
   this.firstName = firstName;
@@ -33,7 +35,7 @@ function employeeIDs(id, firstName, lastName, title) {
   this.title = title;
 }
 
-// This creates 4 new objects with employee information.
+// This creates 5 new objects with employee information.
 const employees = [
   new employeeIDs(1, 'Thomas', 'Edison', 'Software Engineer'),
   new employeeIDs(2, 'Benjamin', 'Franklin', 'Programmer'),
@@ -45,7 +47,7 @@ const employees = [
 // This outputs the objects.
 let index = 1
 for (let x = 0; x < employees.length; x++) {
-  console.log(employees[x].id + ' ' + employees[x].firstName+ " "+ employees[x].lastName + " " + employees[x].title)
+  console.log(employees[x].id + ' ' + employees[x].firstName+ ' ' + employees[x].lastName + ' ' + employees[x].title)
   index++
 }
 

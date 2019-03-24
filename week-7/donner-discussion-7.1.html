@@ -15,7 +15,7 @@
 	<meta name="description" content="donner-discussion-7.1">
 
 <!-- This displays todays date and a simple calculator. -->
-  <scriqt>
+  <script> /*changed the q in a p*/
 	function todaysDate ()
 	{
     var elt = document.getElementById("date")
@@ -35,12 +35,12 @@
   {
     var sub1=document.getElementById("calculator").num1.value;
     var sub2=document.getElementById("calculator").num2.value;
-    var answer=Number(sub1}-Number(sub2);
+    var answer=Number(sub1}-Number(sub2); /* changed the } to a ) at the end of Number(sub1)*/
     alert(answer);
   }
   function multiplyNumbers()
   {
-    var mult1=document.getElementById("calculator"}.num1.value;
+    var mult1=document.getElementById("calculator").num1.value; /*changed the } to a ) at the end of document.getElementById("calculator")*/
     var mult2=document.getElementById("calculator").num2.value;
     var answer=Number(mult1)*Number(mult2);
     alert(answer);
@@ -65,7 +65,7 @@
     <input type="submit" value="Add" onClick="sumNumbers()">
     <input type="submit" value="Subtract" onClick="subtractNumbers()">
     <input type="submit" value="Multiply" onClick="multiplyNumbers()">
-    <input type="submit" value="Divide" onClick="divideNumbers()"
+    <input type="submit" value="Divide" onClick="divideNumbers()"> Missing > at the end of divide number>
   </form>
 
 
