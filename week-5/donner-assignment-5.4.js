@@ -4,7 +4,7 @@
 ; Author: Adam Donner
 ; Date: 06 March 2019
 ; Description:
-;
+; This demonstrates the .map function.
 ;
 ;============================================
 
