@@ -24,60 +24,35 @@
 
   // jQuery onClick event
   // Don't remove this, just add your code to the body of the event (curly braces)
-  $(function () {
-    $("table tr").click(function () {
-      var employeeList = [
-  {
-     id: "1",
-     firstName: "Thomas",
-     lastName: "Edison",
-     title: "Software Engineer"
-  },
-  {
-     id: "2",
-     firstName: "Benjamin",
-     lastName: "Franklin",
-     title: "Programmer"
-  },
-  {
-     id: "3",
-     firstName: "Nikola",
-     lastName: "Tesla",
-     title: "Project Manager"
-  },
-  {
-     id: "4",
-     firstName: "Charles",
-     lastName: "Babbage",
-     title: "Product Manager"
-  },
-  {
-     id: "5",
-     firstName: "Alexander",
-     lastName: "Bell",
-     title: "Business Analyst"
-  }
+//  $(function () {
+ //   $("table tr").click(function () {
+
+// This creates an employee constructor object
+function employee(id, firstName, lastName, title) {
+  this.id = id;
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.title = title;
+}
+
+// This creates 5 new objects with employee information.
+const employees = [
+  new employee(1, 'Thomas', 'Edison', 'Software Engineer'),
+  new employee(2, 'Benjamin', 'Franklin', 'Programmer'),
+  new employee(3, 'Nikola', 'Tesla', 'Project Manager'),
+  new employee(4, 'Charles', 'Babbage', 'Product Manager'),
+  new employee(5, 'Alexander', 'Bell', 'Business Analyst'),
 ];
 
-var employeeId = employeeList.map(function(ids){
-  return ids.id;});
-
-var employeeFn = employeeList.map(function(first){
-  return first.firstName;});
-
-var employeeLn = employeeList.map(function(last){
-  return last.lastName;});
-var employeeTitle = employeeList.map(function(titles){
-  return titles.title;});
-
-var out = "<h1>Employee Listing</h1><table><thead>"+"<tr>"+"<th>"+"Id"+"</th>"+"<th>"+"First Name"+"</th>"+"<th>"+"Last Name"+"</th>"+"<th>"+"Title"+"</th>"+"</tr>"+"</thead>"
-for (var x = 0; x < employeeFn.length; x++) {
-    out +="<tr>"+"<td>" + employeeId[x] + "</td>"+"<td>" + employeeFn[x] + "</td>"+"<td>" + employeeLn[x] +"</td>"+"<td>" + employeeTitle[x] + "</td>"+"</tr>";
+var output = "<h1>Employee Listing</h1><table><thead>"+"<tr>"+"<th>"+"Id"+"</th>"+"<th>"+"First Name"+"</th>"+"<th>"+"Last Name"+"</th>"+"<th>"+"Title"+"</th>"+"</tr>"+"</thead>"
+for (var x = 0; x < employees.length; x++) {
+    output +="<tr>"+"<td>"+ employees[x].id + "</td>"+"<td>" + employees[x].firstName + "</td>"+"<td>" + employees[x].lastName +"</td>"+"<td>" + employees[x].title + "</td>"+"</tr>";
 }
-out += "</table>";
-document.getElementById('emps').innerHTML = out;
-})
-  });
+output += "</table>";
+document.getElementById('emps').innerHTML = output;
+
+//})
+ // });
 
 </script>
 </body>

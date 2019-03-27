@@ -1,3 +1,12 @@
+<!--
+============================================
+; Title:  donner-exercise-8.2.html
+; Author: Adam Donner
+; Date:   26 March 2019
+; Description: Uses JavaScript to dynamically creates and manipulates HTML content.
+;===========================================
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,7 +67,7 @@
 ];
 
 var fruits = fruitList.map(function(fruit){
-  return fruit.fruitName;
+  return fruit.fruitName + fruit.id;
 });
 
 var out = "<h2>Fruits</h2><ul>";
