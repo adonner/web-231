@@ -24,8 +24,26 @@
 
   // jQuery onClick event
   // Don't remove this, just add your code to the body of the event (curly braces)
-//  $(function () {
- //   $("table tr").click(function () {
+  $(function () {
+    $("table tr").click(function () {
+
+//I am not 100% sure if this will work without passing the id into the function.
+function getEmployee(id) {
+  for (var empId = 0; empId < employees.length; empId++){
+    if(employees[empId].id === id){
+      alert(employees[empId].id +" " + employees[empId].firstName + " " + employees[empId].lastName + " " + employees[empId].title);
+      break;
+     }
+  }
+}
+
+var id = $(this).find("td:first").html();
+getEmployee(id);
+
+//I cannot figure out how to pass this using the click provided then pass into the function
+//var id = $(this).find("td:first").html();
+
+
 
 // This creates an employee constructor object
 function employee(id, firstName, lastName, title) {
@@ -34,6 +52,8 @@ function employee(id, firstName, lastName, title) {
   this.lastName = lastName;
   this.title = title;
 }
+
+
 
 // This creates 5 new objects with employee information.
 const employees = [
@@ -44,15 +64,29 @@ const employees = [
   new employee(5, 'Alexander', 'Bell', 'Business Analyst'),
 ];
 
-var output = "<h1>Employee Listing</h1><table><thead>"+"<tr>"+"<th>"+"Id"+"</th>"+"<th>"+"First Name"+"</th>"+"<th>"+"Last Name"+"</th>"+"<th>"+"Title"+"</th>"+"</tr>"+"</thead>"
-for (var x = 0; x < employees.length; x++) {
-    output +="<tr>"+"<td>"+ employees[x].id + "</td>"+"<td>" + employees[x].firstName + "</td>"+"<td>" + employees[x].lastName +"</td>"+"<td>" + employees[x].title + "</td>"+"</tr>";
-}
-output += "</table>";
+
+
+var output = "<h1>Employee Listing</h1>";
+output += "<table><thead>";
+output += "<tr><th>Id</th><th>First Name</th><th>Last Name</th><th>Title</th></tr>";
+output += "</thead><tbody>";
+$.each(employees, function(k,c){
+  var row = $("<tr>");
+    $("<td>").html(c.id).appendTo(row);
+    $("<td>").html(c.firstName).appendTo(row);
+    $("<td>").html(c.lastName).appendTo(row);
+    $("<td>").html(c.title).appendTo(row);
+    output += row.prop("outerHTML");
+  });
+  output += "</tbody></table>";
+
+
 document.getElementById('emps').innerHTML = output;
 
-//})
- // });
+
+
+})
+  });
 
 </script>
 </body>
