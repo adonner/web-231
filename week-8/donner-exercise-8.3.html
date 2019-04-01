@@ -16,14 +16,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="../site.css">
     <style type="text/css">
-      .topbar {
-          background-color:steelblue;
-          height: 50px;
-        }
+    /*this creates a top bar using pure css*/
+    body:before {
+          content: "";
+          position:fixed;
+          background:steelblue;
+          left: 0px;
+          right: 0px;
+          top: 0px;
+          height: 65px;
+    }
+    /*this sets the alternating color for the tr in the table using css*/
         tr:nth-child(even) {background:lightgray}
         tr:nth-child(odd) {background:lightblue}
         h2 {
-          padding-top: 20px;
+          padding-top: 85px;
           padding-left: 20px;
           font-family: 'Roboto', sans-serif;
           font-weight: 500;
@@ -50,7 +57,7 @@
       </style>
 </head>
 <body>
-    <div class="topbar"></div>
+
 <h2>My Paragraph</h2>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar ligula neque, vel varius dui hendrerit ac. Vestibulum feugiat, dolor sit amet eleifend egestas, tortor sapien laoreet augue, non dapibus diam ante efficitur orci. Aliquam ut molestie lectus, vitae luctus sapien. Maecenas vestibulum dictum commodo. Morbi accumsan quis arcu ullamcorper rutrum. Pellentesque et ex metus. Donec venenatis velit ut aliquet bibendum.</p>
 <button>Toggle</button>
@@ -76,14 +83,16 @@
     </tr>
 
 </table>
-<script>
-$(document).ready(function(){
-  $("button").click(function(){
-    $("p").toggle();
-  });
-});
 
-$(".fruitId").click(function (event) {
+<script>
+  //This sets the toggle button to hide paragraph.
+  $(document).ready(function(){
+    $("button").click(function(){
+      $("p").toggle();
+   });
+  });
+  //This displays the fruit information when clicking on the fruitId.
+  $(".fruitId").click(function (event) {
     event.preventDefault();
     var fruitId = $(this).text();
     var fruitType = $(this).closest("td").next().text();

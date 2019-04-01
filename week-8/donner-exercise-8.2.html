@@ -15,12 +15,18 @@
   <title>Exercise 8.2</title>
 
   <style type="text/css">
-  .topbar {
-      background-color:steelblue;
-      height: 50px;
+    /*this creates a top bar using pure css*/
+    body:before {
+          content: "";
+          position:fixed;
+          background:steelblue;
+          left: 0px;
+          right: 0px;
+          top: 0px;
+          height: 65px;
     }
     h2 {
-      padding-top: 20px;
+      padding-top: 85px;
       font-family: 'Roboto', sans-serif;
       font-weight: 400;
       margin: 0 auto;
@@ -37,46 +43,47 @@
 
   </style>
 </head>
-<body>
-  <div class="topbar"></div>
-  <div id="fruits"></div>
+  <body>
+
+    <div id="fruits"></div>
 
 
-<script>
+    <script>
+    //This creates an arry of fruits with two fields, id and fruitName
       var fruitList = [
-  {
-     id: "101",
-     fruitName: "Apple",
-  },
-  {
+      {
+      id: "101",
+       fruitName: "Apple",
+      },
+      {
      id: "102",
      fruitName: "Oranges",
-  },
-  {
+      },
+      {
      id: "103",
      fruitName: "Pears",
-  },
-  {
+      },
+      {
      id: "104",
      fruitName: "Bananas",
-  },
-  {
+      },
+      {
      id: "105",
      fruitName: "Peaches",
-  },
-];
-
-var fruits = fruitList.map(function(fruit){
-  return fruit.fruitName + fruit.id;
-});
-
-var out = "<h2>Fruits</h2><ul>";
-for (var x = 0; x < fruits.length; x++) {
-    out += "<li>" + fruits[x] + "</li>";
-}
-out += "</ul>";
-
-document.getElementById('fruits').innerHTML = out;
+      },
+  ];
+  //This maps the fruitName to the fruit variable to create a new array.
+  var fruits = fruitList.map(function(fruit){
+    return fruit.fruitName;
+  });
+//This outputs the new array to a an unordered list.
+  var out = "<h2>Fruits</h2><ul>";
+    for (var x = 0; x < fruits.length; x++) {
+      out += "<li>" + fruits[x] + "</li>";
+    }
+      out += "</ul>";
+  //This sets the returns the HTML content of the element.
+  document.getElementById('fruits').innerHTML = out;
 
 </script>
 

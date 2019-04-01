@@ -1,3 +1,13 @@
+<!--
+============================================
+; Title:  donner-assignment-8.4.html
+; Author: Adam Donner
+; Date:   31 March 2019
+; Description: Demonstrates the use of jQuery click to alert the user of the contents of the line of data.
+;===========================================
+-->
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -23,6 +33,26 @@
       // jQuery onClick event
       // Don't remove this, just add your code to the body of the event (curly braces)
       $(function() {
+
+
+        // This creates an employee constructor object.
+        function employee(id, firstName, lastName, title) {
+          this.id = id;
+          this.firstName = firstName;
+          this.lastName = lastName;
+          this.title = title;
+        }
+
+        // This creates 5 new objects with employee information.
+        const employees = [
+          new employee(1, "Thomas", "Edison", "Software Engineer"),
+          new employee(2, "Benjamin", "Franklin", "Programmer"),
+          new employee(3, "Nikola", "Tesla", "Project Manager"),
+          new employee(4, "Charles", "Babbage", "Product Manager"),
+          new employee(5, "Alexander", "Bell", "Business Analyst")
+        ];
+
+        // This is where I created a function to search and alert the employee information.
         function getEmployee(id) {
           for (var empId = 0; empId < employees.length; empId++) {
             if (employees[empId].id == id) {
@@ -40,23 +70,7 @@
           }
         }
 
-        // This creates an employee constructor object
-        function employee(id, firstName, lastName, title) {
-          this.id = id;
-          this.firstName = firstName;
-          this.lastName = lastName;
-          this.title = title;
-        }
-
-        // This creates 5 new objects with employee information.
-        const employees = [
-          new employee(1, "Thomas", "Edison", "Software Engineer"),
-          new employee(2, "Benjamin", "Franklin", "Programmer"),
-          new employee(3, "Nikola", "Tesla", "Project Manager"),
-          new employee(4, "Charles", "Babbage", "Product Manager"),
-          new employee(5, "Alexander", "Bell", "Business Analyst")
-        ];
-
+        // This is where I output the employee information in a table.
         var output = "<h1>Employee Listing</h1>";
         output += "<table><thead>";
         output +=
@@ -81,8 +95,10 @@
         output += "</tbody></table>";
         document.getElementById("emps").innerHTML = output;
 
+        // Here I added a class named "table tr" to the #emps so that I can search the table that has been drawn for the information on click.
         $("#emps").addClass("table tr");
 
+        // This uses table tr to do a click event to call the find td:first and return the id back to getEmployee function.
         $("table tr").click(function() {
           event.preventDefault();
           var id = $(this).find("td:first").html();
